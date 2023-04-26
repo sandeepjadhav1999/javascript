@@ -1,0 +1,24 @@
+.counter {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .count {
+    counter-reset: counter;
+    animation: count-up 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes count-up {
+    from {
+      counter-increment: counter 0;
+    }
+    to {
+      counter-increment: counter 100;
+    }
+  }
+  
+  .count::after {
+    content: counter(counter);
+  }
+  
